@@ -1,4 +1,5 @@
-lst = [1, 1, 2, 3, 3, 3, 3, 5]
+import random
+lst = [random.randint(0,10) for _ in range(20)]
 
 def freq_counter(lst):
   freq_dict = {}
