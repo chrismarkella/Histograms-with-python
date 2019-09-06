@@ -1,4 +1,5 @@
 import random
+
 lst = [random.randint(0,10) for _ in range(20)]
 
 def freq_counter(lst):
@@ -9,7 +10,10 @@ def freq_counter(lst):
 
 def histogram(lst):
   freq_dict = freq_counter(lst)
-  for tup in freq_dict.items():
+
+  sorted_dict_by_values = sorted(freq_dict.items(), key = lambda tup: tup[1])
+
+  for tup in sorted_dict_by_values:
     print(tup[0], "*" * tup[1])
 
 print(lst)
