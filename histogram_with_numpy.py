@@ -20,3 +20,14 @@ print(bin_edges)
 
 min_value, max_value = min(d), max(d)
 print('min: %.2f, max: %.2f' %(min_value, max_value))
+
+range_size = max_value - min_value
+bin_size   = range_size / 10
+print('range size: %.2f' %range_size)
+print('bin size: %.2f' %bin_size)
+print('first bin is [%.2f, %.2f)' %(min_value, min_value + bin_size))
+
+numbers_in_first_bin = hist[0]
+
+print('first 10 datapoints after sorting: ')
+for _ in sorted(d)[:numbers_in_first_bin + 1]: print('%.2f' %_)
